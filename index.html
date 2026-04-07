@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judiciary Search Engine - Professional Legal Research</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Main Chat Area -->
+        <main class="main-chat">
+            <header class="chat-header">
+                <div class="header-title">
+                    <div class="logo-mark">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h1>Judiciary Search Engine</h1>
+                </div>
+                <div class="header-actions">
+                    <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle theme">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button>
+                    <button class="clear-btn" id="clearChatBtn" title="Clear chat">
+                        <i class="fas fa-trash-alt"></i>
+                        <span>Clear Chat</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Chat Messages -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="welcome-message">
+                    <div class="welcome-content">
+                        <div class="welcome-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h2>Welcome to Legal AI Assistant</h2>
+                        <p>Your professional legal research companion. Ask me anything about Indian laws, legal provisions, case laws, and judicial procedures.</p>
+                        <div class="quick-questions">
+                            <h3>Popular Questions</h3>
+                            <div class="question-chips">
+                                <button class="question-chip" data-query="Explain Section 420 IPC">
+                                    <i class="fas fa-gavel"></i>
+                                    <span>Section 420 IPC</span>
+                                </button>
+                                <button class="question-chip" data-query="What is criminal breach of trust?">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Criminal Breach of Trust</span>
+                                </button>
+                                <button class="question-chip" data-query="Explain property rights in India">
+                                    <i class="fas fa-home"></i>
+                                    <span>Property Rights</span>
+                                </button>
+                                <button class="question-chip" data-query="What is bail and its types?">
+                                    <i class="fas fa-key"></i>
+                                    <span>Bail Types</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="chat-input-area">
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <textarea 
+                            class="chat-input" 
+                            id="chatInput" 
+                            placeholder="Ask a legal question…"
+                            rows="1"
+                        ></textarea>
+                        <button class="send-btn" id="sendBtn" disabled>
+                            <i class="fas fa-arrow-up"></i>
+                        </button>
+                    </div>
+                    <div class="input-footer">
+                        <span class="char-count" id="charCount">0 / 500</span>
+                        <span class="powered-label">Powered by Judiciary Search Engine</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Error Modal -->
+    <div class="modal" id="errorModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-exclamation-triangle"></i> Error</h3>
+                <button class="close-btn" id="closeErrorModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="errorMessage"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
